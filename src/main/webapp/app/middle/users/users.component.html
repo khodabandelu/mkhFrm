@@ -1,0 +1,26 @@
+<div class="container">
+  <h2>User Table</h2>
+  <p>USer Json :
+    {{users|json}}</p>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Username</th>
+      <th>Cellphone</th>
+      <th>Email</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users ;">
+      <td>{{user.firstName}}</td>
+      <td>{{user.lastName}}</td>
+      <td>{{user.username}}</td>
+      <td>{{user.cellphone}}</td>
+      <td>{{user.email}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+

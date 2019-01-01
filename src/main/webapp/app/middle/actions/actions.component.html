@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Action Table</h2>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Title</th>
+      <th>Source</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let action of actions ;">
+      <td>{{action.title}}</td>
+      <td>{{action.src}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+

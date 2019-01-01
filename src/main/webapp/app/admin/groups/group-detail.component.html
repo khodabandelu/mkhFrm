@@ -1,0 +1,30 @@
+<div class="card m-t-20">
+    <div class="card-body">
+        <h4 class="card-title">
+            <span jhiTranslate="groups.detail.title">View Group</span>
+            <button type="submit"
+                    routerLink="../../"
+                    class="btn btn-primary float-left">
+                <i class="fa fa-arrow-left"></i>
+                &nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+        </h4>
+
+
+        <dl class="row-md jh-entity-details">
+            <dt><span jhiTranslate="groups.name">Name</span></dt>
+            <dd><span>{{group.name}}</span></dd>
+            <!--<dt><span jhiTranslate="groups.code">Code</span></dt>-->
+            <!--<dd>{{group.code}}</dd>-->
+            <dt><span jhiTranslate="groups.authorities">Authorities</span></dt>
+            <dd>
+                <ul class="list-unstyled">
+                    <li *ngFor="let authority of group.authorities">
+                        <span class="badge badge-info">{{authority}}</span>
+                    </li>
+                </ul>
+            </dd>
+        </dl>
+
+    </div>
+</div>

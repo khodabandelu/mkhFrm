@@ -1,0 +1,35 @@
+<div class="card m-t-20">
+    <div class="card-body">
+        <h4 class="card-title">
+            <span jhiTranslate="users.detail.title">View User</span>
+            <button type="submit"
+                    routerLink="../../"
+                    class="btn btn-primary float-left">
+                <i class="fa fa-arrow-left"></i>
+               &nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+            [<b>{{user.username}}</b>]
+        </h4>
+
+
+        <dl class="row-md jh-entity-details">
+            <dt><span jhiTranslate="users.username">Username</span></dt>
+            <dd>
+                <span>{{user.username}}</span>
+                <jhi-boolean
+                    [value]="user.enabled"
+                    [textTrue]="'users.enabled' | translate"
+                    [textFalse]="'users.disabled' | translate">
+                </jhi-boolean>
+            </dd>
+            <dt><span jhiTranslate="users.firstName">First Name</span></dt>
+            <dd>{{user.firstName}}</dd>
+            <dt><span jhiTranslate="users.lastName">Last Name</span></dt>
+            <dd>{{user.lastName}}</dd>
+            <dt><span jhiTranslate="users.email">Email</span></dt>
+            <dd>{{user.email}}</dd>
+            <!--<dt><span jhiTranslate="users.createdBy">Created By</span></dt>-->
+        </dl>
+
+    </div>
+</div>

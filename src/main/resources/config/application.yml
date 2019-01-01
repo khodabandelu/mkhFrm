@@ -1,0 +1,56 @@
+spring:
+    application:
+        name: mkhFramework
+    profiles:
+        active: #spring.profiles.active#
+    jpa:
+        open-in-view: false
+        hibernate:
+            ddl-auto: none
+            naming:
+                physical-strategy: org.springframework.boot.orm.jpa.hibernate.SpringPhysicalNamingStrategy
+                implicit-strategy: org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy
+    messages:
+        basename: i18n/messages
+    mvc:
+        favicon:
+            enabled: false
+    thymeleaf:
+        mode: HTML
+
+server:
+    servlet:
+        session:
+            cookie:
+                http-only: true
+
+mkh:
+    async:
+        core-pool-size: 2
+        max-pool-size: 50
+        queue-capacity: 10000
+    # By default CORS is disabled. Uncomment to enable.
+    cors:
+        allowed-origins: "*"
+        allowed-methods: "*"
+        allowed-headers: "access-control-allow-methods,access-control-allow-origin,authorization,Content-Type"
+        exposed-headers: "Link,X-Total-Count"
+        allow-credentials: true
+        max-age: 1800
+    mail:
+        from: mkhFramework@localhost
+    swagger:
+        default-include-pattern: /api/.*
+        title: mkhFramework API
+        description: mkhFramework API documentation
+        version: 0.0.1
+        terms-of-service-url:
+        contact-name:
+        contact-url:
+        contact-email:
+        license:
+        license-url:
+
+logging:
+    file: target/mkhFramework.log
+

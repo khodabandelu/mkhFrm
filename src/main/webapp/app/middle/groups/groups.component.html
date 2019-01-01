@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Group Table</h2>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>Code</th>
+      <th>Group Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let group of groups ;">
+      <td>{{group.code}}</td>
+      <td>{{group.groupName}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+

@@ -1,0 +1,19 @@
+<div class="card m-t-20">
+    <div class="card-body">
+        <h4 class="card-title"><span>Video</span>
+            <button class="btn btn-primary btn-rounded  float-left jh-create-entity" [routerLink]="['/admin/cameras']">
+                <span >Camera</span>
+            </button>
+        </h4>
+        <h6 class="card-subtitle">
+            <jhi-alert></jhi-alert>
+        </h6>
+        <div>
+            <video *ngFor="let video of videos;" controls="" width="200" height="200" class="m-1">
+                <source
+                    src="{{resourceUrl+video.actionUrl}}"
+                    type="video/mp4">
+            </video>
+        </div>
+    </div>
+</div>

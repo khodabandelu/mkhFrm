@@ -1,0 +1,36 @@
+{
+    "groups": {
+        "home": {
+            "title": "گروه ها",
+            "createLabel": "ایجاد گروه جدید",
+            "createOrEditLabel": "ایجاد یا تغییر گروه"
+        },
+        "created": "گروه جدید ایجاد شد {{ param }}",
+        "updated": "گروه به روز رسانی شد {{ param }}",
+        "deleted": "گروه حذف گردید {{ param }}",
+        "delete": {
+            "question": "آیا مایل به حذف گروه {{name}} هستید؟"
+
+        },
+        "detail": {
+            "title": "گروه"
+        },
+        "name": "نام",
+        "code": "کد",
+        "authorities": "دسترسی ها",
+        "users": "کاربران",
+        "createdBy": "ایجاد شده توسط ",
+        "createdDate": "زمان ایجاد",
+        "lastModifiedBy": "ویرایش شده توسط",
+        "lastModifiedDate": "زمان ویرایش",
+        "action" : {
+            "authorities":"دسترسی ها",
+            "users":"کاربران"
+        },
+        "users":{
+            "delete": {
+                "question": "آیا مایل به حذف کاربر {{username}} از این گروه هستید؟"
+            }
+        }
+    }
+}

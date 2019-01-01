@@ -1,0 +1,18 @@
+
+<div class="card m-t-20">
+    <div class="card-body">
+        <h4 class="card-title"><span>Camera</span>
+            <button class="btn btn-primary btn-rounded  float-left jh-create-entity" [routerLink]="['/admin/videos']">
+                <span >Video</span>
+            </button>
+        </h4>
+        <h6 class="card-subtitle">
+            <jhi-alert></jhi-alert>
+        </h6>
+        <div>
+            <video controls="" autoplay="" name="media" width="400" height="400">
+                <source src="{{src}}" type="video/mp4">
+            </video>
+        </div>
+    </div>
+</div>

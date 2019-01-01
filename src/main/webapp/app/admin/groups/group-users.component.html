@@ -1,0 +1,41 @@
+<div class="card m-t-20">
+    <div class="card-body">
+        <h4 class="card-title">
+            <span jhiTranslate="groups.action.users">Users</span>
+            <button type="submit"
+                    routerLink="../../"
+                    class="btn btn-primary float-left">
+                <i class="fa fa-arrow-left"></i>
+                &nbsp;<span jhiTranslate="entity.action.back">Back</span>
+            </button>
+        </h4>
+        <h6 class="card-subtitle">
+            <jhi-alert></jhi-alert>
+        </h6>
+
+        <table class="table" *ngIf="group">
+            <tr>
+                <th><span jhiTranslate="global.field.id">ID</span></th>
+                <th><span jhiTranslate="users.username">Username</span></th>
+                <th><span jhiTranslate="users.email">Email</span></th>
+                <th><span jhiTranslate="users.langKey">Lang Key</span></th>
+                <th></th>
+            </tr>
+            <tr *ngFor="let user of group.users;">
+                <td>{{user.id}}</td>
+                <td>{{user.username}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.langKey}}</td>
+                <td>
+                    <div class="btn-group">
+                        <button type="button" (click)="deleteUserFromGroup(user)"
+                                class="btn btn-danger btn-sm">
+                            <i class="fa fa-times"></i>
+                            <span class="d-none d-md-inline" jhiTranslate="entity.action.delete">Delete</span>
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

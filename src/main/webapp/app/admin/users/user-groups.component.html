@@ -1,0 +1,33 @@
+<div class="card m-t-20">
+    <div class="card-body">
+        <h4 class="card-title">
+            <span jhiTranslate="groups.action.authorities">Groups</span>
+            <button type="submit"
+                    routerLink="../../"
+                    class="btn btn-primary float-left">
+                <i class="fa fa-arrow-left"></i>
+                &nbsp;<span jhiTranslate="entity.action.back"> Back</span>
+            </button>
+        </h4>
+        <h6 class="card-subtitle">
+            <jhi-alert></jhi-alert>
+        </h6>
+        <!--*ngIf="user"-->
+        <div class="table-responsive" >
+            <table class="table">
+                <tr *ngFor="let group of groups;">
+                    <td class="p-0">
+                        <div class="custom-control custom-checkbox mr-sm-2">
+                            <input class="custom-control-input" type="checkbox" id="{{group.name}}"
+                                   (change)="onChangeGroup(group, $event.target.checked)"
+                                   [checked]="evaluateGroup(group)">
+                            <label class="custom-control-label" for="{{group.name}}">{{group.name}}</label>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <button class="btn btn-primary "[disabled]="isSaving" (click)="submitGroups()"><span jhiTranslate="entity.action.save">Save</span></button>
+    </div>
+</div>
